@@ -11,7 +11,7 @@ export class BookService {
     ) {}
 
     async findAll() {
-        const books =  await this.bookModel.find().select('name')
+        const books =  await this.bookModel.find().select('name').select('abbrev')
         return books
     }
 
